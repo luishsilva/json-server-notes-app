@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+li {
+  cursor: pointer;
+}
+
+.form-group {
+  margin: 5px;
+}
+
+.form-group textarea {
+  max-height: 30px;
+}
+
+form label{
+  margin-right: 3px;
+}
