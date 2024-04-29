@@ -20,3 +20,39 @@ li {
 form label{
   margin-right: 3px;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.width-1 {
+  width: 10px;
+}
+
+.width-50 {
+  width: 50px;
+}
+
+.max-width-200 {
+  max-width: 200px;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.border-1 {
+  border: 1px solid white;
+}
+
+.p-3 {
+  padding: 3px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

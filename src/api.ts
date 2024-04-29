@@ -24,5 +24,23 @@ export const Requests = {
                 "Content-Type": "application/json",
             }
         }).then((response) => response.json())
-    )
+    ),
+    deleteNotes: (id: string): Promise<void> => {
+        return new Promise((resolve, reject) => {
+            fetch(`${BASE_URL}/notes/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then((response) => {
+                if (!response.ok) {
+                    reject(new Error("Failed to delete note"));
+                } else {
+                    resolve(); // Resolve the Promise when deletion is successful
+                }
+            }).catch((error) => {
+                reject(error); // Reject the Promise if there's an error with the fetch operation
+            });
+        });
+    }
 };

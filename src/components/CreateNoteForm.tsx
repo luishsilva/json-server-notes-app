@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Note } from "../types";
 
-export const CreateNoteForm = ({createNote}: {createNote: (note: Omit<Note, "id">) => void }) => {
+export const CreateNoteForm = ({ createNote, isLoading }: { createNote: (note: Omit<Note, "id">) => void;  isLoading: boolean}) => {
+
     const [titleInput, setTitleInput] = useState("");
     const [contentInput, setContentInput] = useState("");
 
@@ -41,7 +42,7 @@ export const CreateNoteForm = ({createNote}: {createNote: (note: Omit<Note, "id"
                     }}
                 />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={isLoading}>{isLoading ? "Submmiting" : "Submit"}</button>
         </form>
     );
 }
